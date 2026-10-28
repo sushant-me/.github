@@ -1,0 +1,34 @@
+name: Feature request
+description: A case the tool does not cover.
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the case that is missed, not the API you would like. A case with a
+        concrete input is worth more than a design with no example.
+
+  - type: textarea
+    id: case
+    attributes:
+      label: The case it misses
+      description: What are you trying to detect, verify or measure, and what happens today instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: today
+    attributes:
+      label: What you do instead today
+      description: The workaround, if there is one.
+    validations:
+      required: false
+
+  - type: textarea
+    id: done
+    attributes:
+      label: What "done" would look like
+      description: The observable outcome that would tell you this was solved — a command, an exit code, a finding.
+    validations:
+      required: true

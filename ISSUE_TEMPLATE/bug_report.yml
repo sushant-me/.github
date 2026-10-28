@@ -1,0 +1,52 @@
+name: Bug report
+description: Something here does not do what it says it does.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Suspected security vulnerability?** Do not file it here. See
+        [SECURITY.md](../blob/main/SECURITY.md) and report it privately.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Release tag, commit SHA, or "default branch at <sha>".
+      placeholder: "v0.1.15, or 9f674f0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: claims
+    attributes:
+      label: What it says it does
+      description: Quote the README line, doc comment or help text that the observed behaviour contradicts.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What it actually does
+      description: The output you got, verbatim, and the exit status if it matters.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Smallest reproduction
+      description: The shortest command or input that shows it. Omit only if you genuinely cannot reduce it.
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, runtime and tool versions, and anything else that could plausibly matter.
+    validations:
+      required: false
